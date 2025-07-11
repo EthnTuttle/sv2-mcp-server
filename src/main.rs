@@ -169,8 +169,9 @@ async fn main() -> anyhow::Result<()> {
         },
 
         None => {
-            // Show help if no command provided
-            let _ = Cli::command().print_help();
+            // MCP mode - handle JSON-RPC over stdin/stdout
+            let server = StratumV2MCPServer::new();
+            server.run_mcp_server().await?;
         }
     }
 

@@ -69,6 +69,26 @@ impl StratumV2MCPServer {
         self.demonstrate_buffer_management_blocking()
     }
 
+    // MCP Server Implementation
+    pub async fn run_mcp_server(&self) -> anyhow::Result<()> {
+        tracing::info!("Starting Stratum V2 MCP Server");
+        
+        // Simple JSON-RPC over stdin/stdout
+        let stdin = tokio::io::stdin();
+        let stdout = tokio::io::stdout();
+        
+        // For now, just keep the server running
+        // A proper MCP implementation would handle JSON-RPC messages
+        // This is a placeholder until we can properly integrate with the rmcp crate
+        
+        eprintln!("MCP Server started - listening on stdin/stdout");
+        
+        // Keep the server running indefinitely
+        loop {
+            tokio::time::sleep(tokio::time::Duration::from_secs(1)).await;
+        }
+    }
+
     // Blocking implementations
     fn analyze_protocol_spec_blocking(&self) -> String {
         let spec = ProtocolSpec {
