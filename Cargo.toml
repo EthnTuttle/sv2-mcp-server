@@ -1,0 +1,52 @@
+[package]
+name = "stratum-v2-mcp-server"
+version = "0.1.0"
+edition = "2021"
+description = "A comprehensive Model Context Protocol (MCP) server for working with the Stratum V2 mining protocol specification"
+authors = ["Stratum V2 MCP Server Contributors"]
+license = "MIT"
+repository = "https://github.com/average-gary/sv2-mcp-server"
+homepage = "https://github.com/average-gary/sv2-mcp-server"
+documentation = "https://docs.rs/stratum-v2-mcp-server"
+keywords = ["stratum", "v2", "mining", "bitcoin", "mcp", "protocol", "tlv"]
+categories = ["api-bindings", "cryptography", "network-programming"]
+readme = "README.md"
+rust-version = "1.70"
+
+[dependencies]
+rmcp = { version = "0.2.0", features = ["server", "transport-io"] }
+tokio = { version = "1.0", features = ["full", "signal"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+clap = { version = "4.0", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+hex = "0.4"
+bytes = "1.0"
+uuid = { version = "1.0", features = ["v4"] }
+rand = "0.8"
+schemars = "0.8"
+
+# Core Stratum V2 Protocol Crates (working versions)
+binary_sv2 = "3.0.0"
+binary_codec_sv2 = "2.0.0"
+codec_sv2 = "2.1.0"
+framing_sv2 = "5.0.0"
+noise_sv2 = "1.4.0"
+buffer_sv2 = "2.0.0"
+error_handling = "1.0.0"
+
+# Stratum V2 Subprotocols (working versions)
+common_messages_sv2 = "5.0.0"
+job_declaration_sv2 = "4.0.0"
+mining_sv2 = "4.0.0"
+template_distribution_sv2 = "3.1.0"
+roles_logic_sv2 = "3.0.0"
+
+# Network utilities (working versions)
+network_helpers_sv2 = "4.0.0"
+
+[dev-dependencies]
+tokio-test = "0.4" 

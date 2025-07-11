@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "stratum-v2": {
+      "command": "cargo",
+      "args": ["run", "--manifest-path", "./Cargo.toml"],
+      "env": {},
+      "description": "Stratum V2 Protocol MCP Server"
+    }
+  }
+} 

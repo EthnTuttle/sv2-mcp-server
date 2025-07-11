@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "stratum-v2": {
+      "command": "cargo",
+      "args": ["run", "--release"],
+      "cwd": "/path/to/your/sv2-mcp-server"
+    }
+  }
+} 
