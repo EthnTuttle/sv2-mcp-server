@@ -1,0 +1,5 @@
+# Goose recipe to analyze Stratum V2 protocol
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server analyze-protocol
+    description: Analyze the Stratum V2 protocol specification

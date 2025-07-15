@@ -1,0 +1,9 @@
+# Goose recipe to parse TLV fields from hex string
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server parse-tlv-fields "{{hex_bytes}}"
+    description: Parse TLV fields from a hexadecimal string
+    parameters:
+      - name: hex_bytes
+        type: string
+        description: Hexadecimal string of bytes to parse as TLV fields

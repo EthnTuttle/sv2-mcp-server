@@ -1,0 +1,12 @@
+# Goose recipe to decode binary data to JSON
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server decode-message "{{message_type}}" "{{hex_bytes}}"
+    description: Decode binary data to JSON format for Stratum V2
+    parameters:
+      - name: message_type
+        type: string
+        description: The type of message to decode
+      - name: hex_bytes
+        type: string
+        description: Hexadecimal string of bytes to decode

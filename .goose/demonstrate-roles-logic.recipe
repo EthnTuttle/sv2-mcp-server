@@ -1,0 +1,5 @@
+# Goose recipe to demonstrate Stratum V2 roles architecture
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server demonstrate-roles-logic
+    description: Demonstrate the roles architecture logic in Stratum V2

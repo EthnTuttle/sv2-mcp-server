@@ -1,0 +1,5 @@
+# Goose recipe to demonstrate advanced Stratum V2 features
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server demonstrate-advanced-features
+    description: Demonstrate advanced features of Stratum V2 using official crates

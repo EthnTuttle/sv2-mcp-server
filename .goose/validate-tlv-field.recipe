@@ -1,0 +1,15 @@
+# Goose recipe to validate a TLV field
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server validate-tlv-field {{extension_type}} {{field_type}} "{{value}}"
+    description: Validate a TLV field for a specific Stratum V2 extension
+    parameters:
+      - name: extension_type
+        type: integer
+        description: The type ID of the extension
+      - name: field_type
+        type: integer
+        description: The field type ID within the extension
+      - name: value
+        type: string
+        description: The value to validate for the TLV field

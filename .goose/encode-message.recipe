@@ -1,0 +1,12 @@
+# Goose recipe to encode a JSON message to binary
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server encode-message "{{message_type}}" "{{json_message}}"
+    description: Encode a JSON message to binary format for Stratum V2
+    parameters:
+      - name: message_type
+        type: string
+        description: The type of message to encode
+      - name: json_message
+        type: string
+        description: The JSON formatted message content to encode

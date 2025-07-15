@@ -1,0 +1,15 @@
+# Goose recipe to create a TLV field for an extension
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server create-tlv-field {{extension_type}} {{field_type}} "{{value}}"
+    description: Create a TLV field for a specific Stratum V2 extension
+    parameters:
+      - name: extension_type
+        type: integer
+        description: The type ID of the extension
+      - name: field_type
+        type: integer
+        description: The field type ID within the extension
+      - name: value
+        type: string
+        description: The value to set for the TLV field

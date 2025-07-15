@@ -1,0 +1,5 @@
+# Goose recipe to list Stratum V2 extensions
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server list-extensions
+    description: List all supported Stratum V2 extensions

@@ -1,0 +1,5 @@
+# Goose recipe to demonstrate buffer management capabilities
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server demonstrate-buffer-management
+    description: Demonstrate buffer management capabilities in Stratum V2

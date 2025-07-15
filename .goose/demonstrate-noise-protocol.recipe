@@ -1,0 +1,5 @@
+# Goose recipe to demonstrate Noise protocol security features
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server demonstrate-noise-protocol
+    description: Demonstrate Noise protocol security features in Stratum V2

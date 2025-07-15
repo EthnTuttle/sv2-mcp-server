@@ -1,0 +1,9 @@
+# Goose recipe to generate a test message
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server generate-test-message "{{message_type}}"
+    description: Generate a test message for a specific Stratum V2 message type
+    parameters:
+      - name: message_type
+        type: string
+        description: The type of message to generate

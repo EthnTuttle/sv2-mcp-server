@@ -1,0 +1,9 @@
+# Goose recipe to get information about a specific extension
+
+- shell:
+    command: /home/ethan/code/sv2-mcp-server/target/release/stratum-v2-mcp-server get-extension-info {{extension_type}}
+    description: Get detailed information about a specific Stratum V2 extension
+    parameters:
+      - name: extension_type
+        type: integer
+        description: The type ID of the extension to query
